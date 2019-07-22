@@ -1,0 +1,56 @@
+﻿<Page x:Class="InlineButtonRepeat.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:InlineButtonRepeat"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:common="using:Telerik.UI.Xaml.Controls.Primitives.Common"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBox x:Name="ClickedResult"
+                 Header="Times Clicked"
+                 IsReadOnly="True" 
+                 HorizontalAlignment="Left"/>
+        <common:InlineButton Content="I Should Repeat Clicks"
+                             IsRepeatingEnabled="True"
+                             Click="InlineButton_Click">
+            <common:InlineButton.Style>
+                <Style TargetType="common:InlineButton">
+                    <Setter Property="MinWidth"
+                            Value="40" />
+                    <Setter Property="MinHeight"
+                            Value="32" />
+                    <Setter Property="BorderThickness"
+                            Value="2" />
+                    <Setter Property="FontSize"
+                            Value="16" />
+                    <Setter Property="IsTabStop"
+                            Value="False" />
+                    <Setter Property="Background"
+                            Value="White" />
+                    <Setter Property="Foreground"
+                            Value="Black" />
+                    <Setter Property="BorderBrush"
+                            Value="Black" />
+                    <Setter Property="PointerOverBackgroundBrush"
+                            Value="Gray" />
+                    <Setter Property="PointerOverForegroundBrush"
+                            Value="Blue" />
+                    <Setter Property="PointerOverBorderBrush"
+                            Value="DarkGray" />
+                    <Setter Property="PressedForegroundBrush"
+                            Value="Blue" />
+                    <Setter Property="RepeatInterval"
+                            Value="250" />
+                    <Setter Property="RepeatDelay"
+                            Value="500" />
+                    <Setter Property="IsRepeatingEnabled"
+                            Value="True" />
+                </Style>
+            </common:InlineButton.Style>
+        </common:InlineButton>
+
+    </StackPanel>
+</Page>
